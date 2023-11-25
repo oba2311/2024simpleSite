@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Glad you're here</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=David&display=swap');
+            
+            body {
+                font-family: 'David', sans-serif;
+                text-align: center;
+            }
+            
+            .toggle {
+                display: flex;
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            .toggle button {
+                padding: 10px 20px;
+                margin: 0 5px;
+                font-size: 16px;
+                background-color: #ccc;
+                border: none;
+                cursor: pointer;
+            }git branch --set-upstream-to=origin/<branch-name>
+            
+            .toggle button.active {
+                background-color: #333;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>You have arrived</h1>
+
+        <p>
+            Thanks for stopping by. You'll most likely find what you came for.  </br>
+            For the best stuff - you'd want to sign up for the newsletter. </br>
+            It is a 1 minute read, every other week. Free forever. 
+        </p>
+        <iframe
+            src="https://growthmail.substack.com/embed"
+            width="480"
+            height="320"
+            style="border: 1px solid #eee; background: white"
+            frameborder="0"
+            scrolling="no"
+        ></iframe>
+
+        <div class="toggle">
+            <button class="active" onclick="toggleContent('thoughts')">Thoughts</button>
+            <button onclick="toggleContent('projects')">Projects</button>
+            <button onclick="toggleContent('collaborate')">Collaborate</button>
+        </div>
+
+        <script>
+            function toggleContent(content) {
+                var thoughts = document.getElementById('thoughts');
+                var projects = document.getElementById('projects');
+                var collaborate = document.getElementById('collaborate');
+
+                thoughts.style.display = 'none';
+                projects.style.display = 'none';
+                collaborate.style.display = 'none';
+
+                if (content === 'thoughts') {
+                    thoughts.style.display = 'block';
+                } else if (content === 'projects') {
+                    projects.style.display = 'block';
+                } else if (content === 'collaborate') {
+                    collaborate.style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+</html>
