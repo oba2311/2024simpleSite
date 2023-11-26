@@ -32,12 +32,36 @@
                 background-color: #333;
                 color: #fff;
             }
+
+                    .carousel-container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        #thoughts {
+            margin: 0 auto;
+            max-width: 60%;
+            text-align: left;
+        }
+
             
+
 #blob-container {
     position: relative;
     width: 200px;
     height: 200px;
+    margin: 10px auto; /* Center horizontally */
 }
+
 
 svg {
     position: absolute;
@@ -102,9 +126,48 @@ svg {
             <button id="collaborateBtn" onclick="toggleContent('collaborate')">Collaborate</button>
         </div>
 
-        <div id="thoughts" style="display: none;">
-            <p>hgi</p>
+        <div class="carousel-container" id="thoughts">
+<div class="carousel-container" id="thoughts">
+    <div class="carousel-wrapper">
+        <div class="carousel-item">
+            <div>
+                <h3>Jira Tickets? Well, no!</h3>
+                <p>
+                    Everybody thinks product managers should master writing issues on Jira.
+                    But that's actually wrong and I'll prove you why.
+                </p>
+                <img src="/Assets/jira-michael-scott.gif" alt="michael scott loves Jira" class="right" width="80%" height="80%">
+                <br>
+                <h4>The Jira-only product org</h4>
+                <p>
+                    Some product organizations make the mistake of skipping one of the most crucial parts of a good PM process - developing a strong product thesis. Instead, they jump straight into implementation without fully understanding the “why”.
+                    This is a bad practice. No ticket should be written before the product manager has convinced their team of the importance and relevance of the task at hand - WHY THIS, WHY NOW.
+                    Product managers should spend at least 50% of their time solidifying their product thesis. This can be achieved through user interviews, market research, competitor analysis, and data review. The stronger your “why” is, the better your team will work together.
+                </p>
+                <h4>Alignment wins.</h4>
+                <p>
+                    Once you have conviction on what’s next for your product, you can start breaking things down.
+                    But don’t jump straight into writing tickets just yet. First, develop a clear PRD and create a “Fat Marker Wireframe”.
+                </p>
+                <img src="/assets/wireframeHorse.png" alt="michael scott loves Jira" class="right" width="80%" height="80%">
+                <br>
+                <p>
+                    Only after you have a clear “why,” a well-defined PRD, and an agreed-upon wireframe, should you start talking about tickets.
+                </p>
+                <p>
+                    Now that you have a clear WHY, a clear PRD and a clear and agreed-upon wireframe, only now we can start talking about tickets.
+                </p>
+            </div>
         </div>
+    </div>
+    <div class="scroll-arrows">
+        <button class="scroll-left" onclick="scroll('left')">&lt;</button>
+        <button class="scroll-right" onclick="scrollCarousel('right')">&gt;</button>
+    </div>
+</div>
+        </div>
+            
+
 
         <div id="projects" style="display: none;">
             <p>as2</p>
@@ -115,13 +178,13 @@ svg {
         </div>
 
 <div id="blob-container">
-        <svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#5179e8" d="M40.4,-67.4C53.5,-61.8,66,-54.1,71.8,-42.2C77.6,-30.3,76.7,-14.2,73.2,0.8C69.7,15.8,63.6,31.6,52.8,44.1C42,56.6,26.4,65.8,9.6,68.8C-7.2,71.8,-24.4,68.6,-37.9,59.5C-51.4,50.3,-61.2,35.3,-65.3,19.1C-69.4,2.9,-67.8,-14.5,-62.2,-30.2C-56.6,-45.9,-47,-59.9,-34.7,-67.7C-22.3,-75.5,-11.2,-77.1,0.7,-77.9C12.6,-78.7,25.3,-78.7,40.4,-67.4Z" transform="translate(100 100)" />
-        </svg>
-        <svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#5261e0" d="M39.4,-67.1C52.3,-59.4,64.9,-49.1,69.9,-36.1C74.9,-23.1,72.3,-7.5,69.5,8.2C66.7,23.9,63.7,39.7,53.5,49.8C43.3,59.9,26.1,64.3,9.7,65.9C-6.7,67.5,-23.4,66.4,-35.6,58.6C-47.8,50.8,-55.5,36.3,-61.3,21.1C-67.1,5.9,-71,-9.9,-67.2,-24.2C-63.4,-38.5,-51.9,-51.2,-38.1,-60.5C-24.3,-69.8,-12.1,-75.7,1.4,-77.4C14.9,-79.1,29.8,-76.8,39.4,-67.1Z" transform="translate(100 100)" />
-        </svg>
-    </div>
+    <svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#5179e8" d="M40.4,-67.4C53.5,-61.8,66,-54.1,71.8,-42.2C77.6,-30.3,76.7,-14.2,73.2,0.8C69.7,15.8,63.6,31.6,52.8,44.1C42,56.6,26.4,65.8,9.6,68.8C-7.2,71.8,-24.4,68.6,-37.9,59.5C-51.4,50.3,-61.2,35.3,-65.3,19.1C-69.4,2.9,-67.8,-14.5,-62.2,-30.2C-56.6,-45.9,-47,-59.9,-34.7,-67.7C-22.3,-75.5,-11.2,-77.1,0.7,-77.9C12.6,-78.7,25.3,-78.7,40.4,-67.4Z" transform="translate(100 100)" />
+    </svg>
+    <svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#5179e8" d="M39.4,-67.1C52.3,-59.4,64.9,-49.1,69.9,-36.1C74.9,-23.1,72.3,-7.5,69.5,8.2C66.7,23.9,63.7,39.7,53.5,49.8C43.3,59.9,26.1,64.3,9.7,65.9C-6.7,67.5,-23.4,66.4,-35.6,58.6C-47.8,50.8,-55.5,36.3,-61.3,21.1C-67.1,5.9,-71,-9.9,-67.2,-24.2C-63.4,-38.5,-51.9,-51.2,-38.1,-60.5C-24.3,-69.8,-12.1,-75.7,1.4,-77.4C14.9,-79.1,29.8,-76.8,39.4,-67.1Z" transform="translate(100 100) scale(0.55)" />
+    </svg>
+</div>
         
     
         <script>
@@ -131,8 +194,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const blob2 = document.getElementById('blob2').querySelector('path');
 
     setInterval(() => {
-        KUTE.to(blob1, { path: blob2 }, { duration: 3000, repeat: 1, yoyo: true }).start();
-    }, 6000);
+        KUTE.to(blob1, { path: blob2 }, { duration: 600, repeat: 1, yoyo: true }).start();
+    }, 1600);
 });
 
 
