@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 
 <head>
     <title>Glad you're here</title>
@@ -8,9 +7,9 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            font-size: clamp(22px, 4vw, 24px);
+            font-size: clamp(16px, 4vw, 18px);
             text-align: center;
-            margin: 10px 45px;
+            margin: 10px 100px;
             line-height: 1.5;
             /* Adjust as needed */
         }
@@ -37,7 +36,10 @@
         }
 
         .carousel-container {
-            display: flex;
+            margin: 40px auto;
+            line-height: 170%;
+            width: 70%;
+            text-align: left;
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
@@ -46,16 +48,8 @@
         .carousel-item {
             flex: 0 0 auto;
             scroll-snap-align: start;
-            width: 100%;
+            width: 70%;
             padding: 0 10px;
-        }
-
-        .scroll-arrows {
-            padding: 5% 0;
-            font-size: 2em;
-            margin: auto;
-            pointer-events: none;
-            /* To allow clicks to pass through to content below */
         }
 
         .scroll-left,
@@ -79,11 +73,11 @@
         }
 
 
-        #thoughts {
+        /* #thoughts {
             margin: 0 auto;
             max-width: 75%;
             text-align: left;
-        }
+        } */
 
         #blob-container {
             position: relative;
@@ -189,10 +183,7 @@
 
             thoughtsBtn.classList.remove('active');
             projectsBtn.classList.remove('active');
-            collaborateBtn.classList.remove('active');
-
-            var scrollArrows = document.querySelector('.scroll-arrows');
-            scrollArrows.style.display = 'none'; // Hide arrows by default
+            collaborateBtn.classList.remove('active')
 
             if (content === 'thoughts') {
                 thoughts.style.display = 'block';
@@ -209,115 +200,70 @@
     </script>
 </head>
 
-<body>
-    <h1>And.. we meet again 👋</h1>
+<br>
+<h1>And.. we meet again 👋</h1>
 
-    <p>
-        Thanks for stopping by.</br>
-        For the best stuff sign up for the newsletter. </br>
-        It is a 1 minute read, every other week. Free forever.
-    </p>
-    <iframe src="https://growthmail.substack.com/embed" width="480" height="320"
-        style="border: 0px solid #eee; background: white" frameborder="0" scrolling="no"></iframe>
+<p>
+    Thanks for stopping by.</br>
+    For the best stuff sign up for the newsletter. </br>
+    It is a 1 minute read, every other week. Free forever.
+</p>
+<iframe src="https://growthmail.substack.com/embed" width="480" height="320"
+    style="border: 0px solid #eee; background: white" frameborder="0" scrolling="no"></iframe>
 
-    <div class="toggle">
-        <button id="thoughtsBtn" class="active" onclick="toggleContent('thoughts')">Thoughts</button>
-        <button id="projectsBtn" onclick="toggleContent('projects')">Projects</button>
-        <button id="collaborateBtn" onclick="toggleContent('collaborate')">Collaborate</button>
+<div class="toggle">
+    <button id="thoughtsBtn" class="active" onclick="toggleContent('thoughts')">Thoughts</button>
+    <button id="projectsBtn" onclick="toggleContent('projects')">Projects</button>
+    <button id="collaborateBtn" onclick="toggleContent('collaborate')">Collaborate</button>
+</div>
+<div class="carousel-container" id="thoughts">
+    Everything I've learned since 2013. </br>
+    </br>
+    I write about what I love doing: </br>
+    </br>
+    🏃‍♂️ running product teams more effectively </br>
+    🔄 increasing rate of iterations and experiments </br>
+    📈 what works and how to pursue specific KPIs</br>
+    </br>
+    <a href="https://growthmail.substack.com/">Subscribe to the GrowthMail Newsletter</a> and never miss the juice.
+</div>
+<div class="carousel-container" id="projects" style="display: none;">
+    <div>
+        <h3> 🌐 This website <br> 11-20023</h3>
+        This was coded from scratch. Weird, right? <br />
+        Is this a good use of my time?
+
+        I tend to think so.
     </div>
-    <div class="scroll-arrows">
-        <button class="scroll-left">&lt;</button>
-        <button class="scroll-right">&gt;</button>
-    </div>
+</div>
+</div>
 
+<div class="carousel-container" id="collaborate" style="display: none;">
+    If you ping me on <a href="https://www.linkedin.com/in/omer-ben-ami/">LinkedIn</a>, I'll most likely to see it
+    within a day. <br />
+    <br />
+    You can also try <a href="https://youtube.com">YouTube</a>.
+</div>
 
-    <div class="carousel-container" id="thoughts">
-        <div class="carousel-item">
-            <div>
-                <h3>Jira Tickets? Well, no!</h3>
-                <p>
-                    Everybody thinks product managers should master writing issues on Jira.
-                    But that's actually wrong and I'll prove you why.
-                </p>
-                <img src="/Assets/jira-michael-scott.gif" alt="michael scott loves Jira" class="right" width="80%"
-                    height="80%">
-                <br>
-                <h4>The Jira-only product org</h4>
-                <p>
-                    Some product organizations make the mistake of skipping one of the most crucial parts of a good
-                    PM process - developing a strong product thesis. Instead, they jump straight into implementation
-                    without fully understanding the “why”.
-                    This is a bad practice. No ticket should be written before the product manager has convinced
-                    their team of the importance and relevance of the task at hand - WHY THIS, WHY NOW.
-                    Product managers should spend at least 50% of their time solidifying their product thesis. This
-                    can be achieved through user interviews, market research, competitor analysis, and data review.
-                    The stronger your “why” is, the better your team will work together.
-                </p>
-                <h4>Alignment wins.</h4>
-                <p>
-                    Once you have conviction on what’s next for your product, you can start breaking things down.
-                    But don’t jump straight into writing tickets just yet. First, develop a clear PRD and create a
-                    “Fat Marker Wireframe”.
-                </p>
-                <img src="/Assets/wireframeHorse.png" alt="michael scott loves Jira" class="right" width="80%"
-                    height="80%">
-                <br>
-                <p>
-                    Only after you have a clear “why,” a well-defined PRD, and an agreed-upon wireframe, should you
-                    start talking about tickets.
-                </p>
-                <p>
-                    Now that you have a clear WHY, a clear PRD and a clear and agreed-upon wireframe, only now we
-                    can start talking about tickets.
-                </p>
-            </div>
-        </div>
-        <div class="carousel-item">
-
-
-
-            <a href="https://bootcamp.uxdesign.cc/increase-onboarding-conversion-by-over-20-f596d8a23f79">
-                <h3>📈 Increase onboarding conversion by over 20%</h3>
-        </div>
-    </div>
-    <div class="carousel-container" id="projects" style="display: none;">
-        <div class="carousel-item">
-            <div>
-                <h3> 🌐 This website <br> 11-20023</h3>
-                This was coded from scratch. Weird, right? <br />
-                Is this a good use of my time?
-
-                I tend to think so.
-            </div>
-        </div>
-    </div>
-
-    <div class="carousel-container" id="collaborate" style="display: none;">
-        Subscribing to the newsletter is the best way to collaborate.<br />
-        Just comment on the newsletter and I'll get back to you. <br />
-        <br />
-        You can also try <a href="https://youtube.com">YouTube</a>.
-    </div>
-
-    <div id="blob-container">
-        <svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:white;" />
-                    <stop offset="25%" style="stop-color:grey;" />
-                    <stop offset="100%" style="stop-color:#5179e8;" />
-                </linearGradient>
-            </defs>
-            <path fill="url(#gradient1)"
-                d="M40.4,-67.4C53.5,-61.8,66,-54.1,71.8,-42.2C77.6,-30.3,76.7,-14.2,73.2,0.8C69.7,15.8,63.6,31.6,52.8,44.1C42,56.6,26.4,65.8,9.6,68.8C-7.2,71.8,-24.4,68.6,-37.9,59.5C-51.4,50.3,-61.2,35.3,-65.3,19.1C-69.4,2.9,-67.8,-14.5,-62.2,-30.2C-56.6,-45.9,-47,-59.9,-34.7,-67.7C-22.3,-75.5,-11.2,-77.1,0.7,-77.9C12.6,-78.7,25.3,-78.7,40.4,-67.4Z"
-                transform="translate(100 100)" />
-        </svg>
-        <svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#5179e8"
-                d="M53.5,-48.3C57.3,-49.1,69.7,-39.4,74.6,-26.8C79.5,-14.2,76.9,1.3,71.6,15.2C66.3,22.1,56.4,41.4,47.2,60.7C36,62,51.5,66.3,6.1,67.9C-9.3,65.5,-18.7,62.4,-30.1,59.6C-41.5,52.8,-54.9,42.3,-61.7,28.9C-68.5,15.5,-68.7,-0.8,-64.5,-29.2C-60.3,-41.6,-52.7,-47,-42.6,-55.5C-27.5,-65,-12.7,-65.6,2.5,-65.1C17.7,-65.6,35.4,-61.5,43.5,-58.3Z"
-                transform="translate(100 100)" />
-        </svg>
-    </div>
+<div id="blob-container">
+    <svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:white;" />
+                <stop offset="25%" style="stop-color:grey;" />
+                <stop offset="100%" style="stop-color:#5179e8;" />
+            </linearGradient>
+        </defs>
+        <path fill="url(#gradient1)"
+            d="M40.4,-67.4C53.5,-61.8,66,-54.1,71.8,-42.2C77.6,-30.3,76.7,-14.2,73.2,0.8C69.7,15.8,63.6,31.6,52.8,44.1C42,56.6,26.4,65.8,9.6,68.8C-7.2,71.8,-24.4,68.6,-37.9,59.5C-51.4,50.3,-61.2,35.3,-65.3,19.1C-69.4,2.9,-67.8,-14.5,-62.2,-30.2C-56.6,-45.9,-47,-59.9,-34.7,-67.7C-22.3,-75.5,-11.2,-77.1,0.7,-77.9C12.6,-78.7,25.3,-78.7,40.4,-67.4Z"
+            transform="translate(100 100)" />
+    </svg>
+    <svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#5179e8"
+            d="M53.5,-48.3C57.3,-49.1,69.7,-39.4,74.6,-26.8C79.5,-14.2,76.9,1.3,71.6,15.2C66.3,22.1,56.4,41.4,47.2,60.7C36,62,51.5,66.3,6.1,67.9C-9.3,65.5,-18.7,62.4,-30.1,59.6C-41.5,52.8,-54.9,42.3,-61.7,28.9C-68.5,15.5,-68.7,-0.8,-64.5,-29.2C-60.3,-41.6,-52.7,-47,-42.6,-55.5C-27.5,-65,-12.7,-65.6,2.5,-65.1C17.7,-65.6,35.4,-61.5,43.5,-58.3Z"
+            transform="translate(100 100)" />
+    </svg>
+</div>
 
 </body>
 
