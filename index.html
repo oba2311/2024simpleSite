@@ -44,7 +44,7 @@
         .carousel-container {
             margin: 40px auto;
             line-height: 170%;
-            width: auto;
+            width: 45%;
             text-align: left;
             overflow-x: unset;
             scroll-snap-type: x mandatory;
@@ -85,7 +85,7 @@
             /* Make iframe a block element */
             margin: auto;
             /* Center the iframe horizontally */
-            width: 580px;
+            width: auto;
             /* Fixed width for the iframe */
             height: 320px;
             /* Fixed height for the iframe */
@@ -93,6 +93,7 @@
             /* Remove border */
             background: white;
             /* Background color */
+            align-self: center;
         }
 
         .embed-page {
@@ -138,7 +139,7 @@
                 box-sizing: border-box;
             }
 
-            .carousel-container iframe {
+            iframe {
                 width: 100%;
                 /* Full width on smaller screens */
                 /* height: auto; */
@@ -235,8 +236,6 @@
             For the best stuff sign up for the newsletter. </br>
             It is a 1 minute read, every other week. Free forever.
         </p>
-        <iframe src="https://growthmail.substack.com/embed" width="580" height="320"
-            style="border: 0px solid #eee; background: white" frameborder="0" scrolling="no"></iframe>
     </section>
     <section id="thoughts" class="carousel-container" style="display: none;">
         Everything I've learned since 2013. </br>
@@ -267,6 +266,8 @@
     </section>
 
     <footer>
+        <iframe src="https://growthmail.substack.com/embed" width="580" height="320"
+            style="border: 0px solid #eee; background: white" frameborder="0" scrolling="no"></iframe>
         <div id="blob-container">
             <svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <defs>
