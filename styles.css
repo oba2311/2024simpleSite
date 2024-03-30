@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.divider {
+  border-top: 1px solid #e2e8f0;
+}
+```
