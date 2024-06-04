@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./*{html,js}",
-		// add other file types if necessary
-	],
+	content: ["./src/**/*.{js,jsx,ts,tsx,html}", "./index.html"],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				"neue-montreal": ['"Neue Montreal"', "sans-serif"],
+			},
+		},
 	},
 	plugins: [],
 };

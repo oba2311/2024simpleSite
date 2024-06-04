@@ -1,9 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "./styles.css"; /* Ensure this line is added */
 
 .divider {
-  border-top: 1px solid #e2e8f0;
+	border-top: 1px solid #e2e8f0;
 }
-```
+
+@font-face {
+	font-family: "Garbata Serif";
+	src: url("./Assets/Silka-Mono-Regular/Silka_Mono_Regular_Desktop/SilkaMono-Regular.otf")
+		format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "Garbata Serif", sans-serif;
+}
