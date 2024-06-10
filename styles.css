@@ -8,13 +8,40 @@
 }
 
 @font-face {
-	font-family: "Garbata Serif";
-	src: url("./Assets/Silka-Mono-Regular/Silka_Mono_Regular_Desktop/SilkaMono-Regular.otf")
-		format("opentype");
-	font-weight: normal;
+	font-family: "DIN Next";
+	src: url("/path-to-your-font-files/din-next-w01-light.woff2") format("woff2"),
+		url("/path-to-your-font-files/din-next-w01-light.woff") format("woff");
+	font-weight: 300;
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "DIN Next";
+	src: url("/path-to-your-font-files/din-next-w02-light.woff2") format("woff2"),
+		url("/path-to-your-font-files/din-next-w02-light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next";
+	src: url("./Assets/DIN Next Rounded LT W01 Light/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff2")
+			format("woff2"),
+		url("./Assets/DIN Next Rounded LT W01 Light/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff")
+			format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+.font_7 {
+	font-family: "DIN Next", sans-serif;
+	font-size: 20px;
+	line-height: 1.4em;
+}
+
 body {
-	font-family: "Garbata Serif", sans-serif;
+	font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light,
+		sans-serif;
+	font-size: 20px;
+	line-height: 1.4em;
 }
