@@ -1,8 +1,8 @@
 {
 	"scripts": {
-		"dev": "tailwindcss -i ./styles.css -o ./dist/output.css"
+		"dev": "tailwindcss -i ./styles.css -o ./dist/output.css && live-server ./"
 	},
 	"dependencies": {
-		"tailwindcss": "^3.4.1"
+		"tailwindcss": "^3.4.10"
 	}
 }
