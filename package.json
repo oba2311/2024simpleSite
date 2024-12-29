@@ -1,8 +1,23 @@
 {
 	"scripts": {
-		"dev": "tailwindcss -i ./styles.css -o ./dist/output.css && live-server ./"
+		"css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+		"dev": "open index.html",
+		"build": "tailwindcss -i ./src/input.css -o ./dist/output.css"
 	},
 	"dependencies": {
-		"tailwindcss": "^3.4.10"
-	}
+		"@tailwindcss/typography": "^0.5.15",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.49",
+		"tailwindcss": "^3.4.17"
+	},
+	"name": "2024simplesite",
+	"description": "",
+	"version": "1.0.0",
+	"main": "tailwind.config.js",
+	"directories": {
+		"lib": "lib"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
 }

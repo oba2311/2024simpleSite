@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./src/**/*.{js,jsx,ts,tsx,html}", "./index.html"],
+	content: ["./*.{html,js}"],
 	theme: {
 		extend: {
 			fontFamily: {
-				"neue-montreal": ['"Neue Montreal"', "sans-serif"],
+				caveat: ["Caveat", "cursive"],
 			},
 		},
 	},

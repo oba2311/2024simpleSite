@@ -1,28 +1,11 @@
+/* Import Caveat font from Google Fonts - MUST be before Tailwind */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./styles.css"; /* Ensure this line is added */
 
-.divider {
-	border-top: 1px solid #e2e8f0;
-}
-
-@font-face {
-	font-family: "DIN Next";
-	src: url("/path-to-your-font-files/din-next-w01-light.woff2") format("woff2"),
-		url("/path-to-your-font-files/din-next-w01-light.woff") format("woff");
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "DIN Next";
-	src: url("/path-to-your-font-files/din-next-w02-light.woff2") format("woff2"),
-		url("/path-to-your-font-files/din-next-w02-light.woff") format("woff");
-	font-weight: 300;
-	font-style: normal;
-}
-
+/* Custom font faces */
 @font-face {
 	font-family: "DIN Next";
 	src: url("./Assets/DIN Next Rounded LT W01 Light/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff2")
@@ -31,17 +14,20 @@
 			format("woff");
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 
-.font_7 {
-	font-family: "DIN Next", sans-serif;
-	font-size: 20px;
-	line-height: 1.4em;
+/* Any custom styles that can't be handled by Tailwind */
+.divider {
+	@apply border-t border-gray-200;
 }
 
+/* Base styles */
 body {
-	font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light,
-		sans-serif;
-	font-size: 20px;
-	line-height: 1.4em;
+	@apply font-din-next text-base leading-relaxed;
+}
+
+/* Ensure Caveat font is loaded */
+.font-caveat {
+	font-family: "Caveat", cursive !important;
 }
