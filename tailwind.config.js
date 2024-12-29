@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
+				"din-next": ['"DIN Next"', "sans-serif"],
 				caveat: ["Caveat", "cursive"],
 			},
 		},
