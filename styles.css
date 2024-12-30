@@ -17,6 +17,39 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "DIN Next";
+	src: url("./Assets/DIN Next Rounded LT W01 Regular/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff2")
+			format("woff2"),
+		url("./Assets/DIN Next Rounded LT W01 Regular/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff")
+			format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DIN Next";
+	src: url("./Assets/DIN Next Rounded LT W01 Medium/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff2")
+			format("woff2"),
+		url("./Assets/DIN Next Rounded LT W01 Medium/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff")
+			format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DIN Next";
+	src: url("./Assets/DIN Next Rounded LT W01 Bold/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff2")
+			format("woff2"),
+		url("./Assets/DIN Next Rounded LT W01 Bold/Web Fonts/643121b5d2cc9943eff9b59054cc29ba.woff")
+			format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 /* Any custom styles that can't be handled by Tailwind */
 .divider {
 	@apply border-t border-gray-200;

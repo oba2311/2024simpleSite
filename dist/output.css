@@ -711,6 +711,16 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
@@ -720,7 +730,7 @@ video {
 }
 
 .font-din-next {
-  font-family: "DIN Next", sans-serif;
+  font-family: DIN Next, sans-serif;
 }
 
 .text-2xl {
@@ -747,16 +757,20 @@ video {
   font-weight: 700;
 }
 
-.font-extralight {
-  font-weight: 200;
-}
-
 .font-medium {
   font-weight: 500;
 }
 
 .font-thin {
   font-weight: 100;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .leading-relaxed {
